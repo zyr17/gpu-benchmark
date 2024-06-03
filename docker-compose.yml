@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  myservice:
+    image: zyr17/benchmark
+    build: .
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: all
+            capabilities: [gpu]
+    volumes:
+      - ~/.cache/huggingface:/root/.cache/huggingface
+      - ~/.cache/torch:/root/.cache/torch
+    environment:
+      - HF_DATASETS_OFFLINE=1
+      - HF_HUB_OFFLINE=1
+      - TRANSFORMERS_OFFLINE=1
+    entrypoint: "bash"
+    command: ["-c", "cd /app; ./test_all.sh;"]
