@@ -165,13 +165,21 @@ def main(
         yield prompter.get_response(output)
 
     # first time not counted
-    _ = list(evaluate("Tell me about alpacas.", "who are you?"))
+    _ = list(evaluate(
+        "Tell me about alpacas.", 
+        "who are you? tell me the detail, as long as possible."
+    ))
     start_time = time.time()
     for i in tqdm(range(30)):
-        _ = list(evaluate("Tell me about alpacas.", "who are you?"))
-        # output length is 194
-    print(f"{dtype}bit alpaca-lora inference time:", time.time() - start_time)
-    print(f"{dtype}bit alpaca-lora inference memory usage:", torch.cuda.memory_reserved())
+        _ = list(evaluate(
+            "Tell me about alpacas.", 
+            "who are you? tell me the detail, as long as possible."
+        ))
+    print(f"{dtype}bit alpaca-lora 30it inference time:", time.time() - start_time)
+    print(
+        f"{dtype}bit alpaca-lora 30it inference memory usage:", 
+        torch.cuda.memory_reserved()
+    )
 
     # gr.Interface(
     #     fn=evaluate,

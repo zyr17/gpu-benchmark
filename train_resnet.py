@@ -34,9 +34,11 @@ def test(dtype, bs, num_iters):
         loss.backward()
         optim.step()
     end_time = time.time()
-    print(f'{dtype} bs={bs} ResNet152 train time:', end_time - start_time)
+    print(f'{dtype} bs={bs} {num_iters}it ResNet152 train time:', end_time - start_time)
     print(
-        f'{dtype} bs={bs} ResNet152 train memory usage:', torch.cuda.memory_reserved())
+        f'{dtype} bs={bs} {num_iters}it ResNet152 train memory usage:', 
+        torch.cuda.memory_reserved()
+    )
     torch.cuda.empty_cache()
 
 

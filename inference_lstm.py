@@ -29,8 +29,11 @@ def test(dtype, bs, num_iters):
     for _ in tqdm(range(num_iters)):
         output, (h, c) = model(x)  # noqa
     end_time = time.time()
-    print(f'{dtype} bs={bs} LSTM inference time:', end_time - start_time)
-    print(f'{dtype} bs={bs} LSTM inference memory usage:', torch.cuda.memory_reserved())
+    print(f'{dtype} bs={bs} {num_iters}it LSTM inference time:', end_time - start_time)
+    print(
+        f'{dtype} bs={bs} {num_iters}it LSTM inference memory usage:', 
+        torch.cuda.memory_reserved()
+    )
     torch.cuda.empty_cache()
 
 

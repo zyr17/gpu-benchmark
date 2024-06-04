@@ -13,6 +13,7 @@ services:
     volumes:
       - ~/.cache/huggingface:/root/.cache/huggingface
       - ~/.cache/torch:/root/.cache/torch
+    # if you want to download huggingface datasets and models, comment the environment.
     environment:
       - HF_DATASETS_OFFLINE=1
       - HF_HUB_OFFLINE=1

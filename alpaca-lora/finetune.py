@@ -226,7 +226,7 @@ def train(
 
     model.print_trainable_parameters()  # Be more transparent about the % of trainable params.
 
-    # set val_set_size and disable, so train size is 
+    # set val_set_size and disable, so train size is 1280
     assert len(data["train"]) == 51760
     val_set_size = 50480
     train_val = data["train"].train_test_split(
@@ -285,8 +285,11 @@ def train(
 
     start_time = time.time()
     trainer.train(resume_from_checkpoint=resume_from_checkpoint)
-    print(f"{dtype}bit alpaca-lora training time:", time.time() - start_time)
-    print(f"{dtype}bit alpaca-lora training memory usage:", torch.cuda.memory_reserved())
+    print(f"{dtype}bit alpaca-lora 10it training time:", time.time() - start_time)
+    print(
+        f"{dtype}bit alpaca-lora 10it training memory usage:", 
+        torch.cuda.memory_reserved()
+    )
 
     # model.save_pretrained(output_dir)
 

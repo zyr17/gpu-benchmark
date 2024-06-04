@@ -16,6 +16,12 @@ export TRANSFORMERS_OFFLINE=1
 export HF_HUB_OFFLINE=1
 ```
 
+The provided `docker-compose.yml` uses above environments, if you want to download them
+from huggingface, uncomment them.
+
+The docker is used for Nvidia cards, and for AMD cards (i.e. 7900XTX), you should build
+by yourself.
+
 ## install environments
 
 Based on Python, PyTorch and huggingface libraries.

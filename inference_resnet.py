@@ -29,9 +29,12 @@ def test(dtype, bs, num_iters):
     for _ in tqdm(range(num_iters)):
         output = model(input)  # noqa
     end_time = time.time()
-    print(f'{dtype} bs={bs} ResNet152 inference time:', end_time - start_time)
     print(
-        f'{dtype} bs={bs} ResNet152 inference memory usage:', 
+        f'{dtype} bs={bs} {num_iters}it ResNet152 inference time:', 
+        end_time - start_time
+    )
+    print(
+        f'{dtype} bs={bs} {num_iters}it ResNet152 inference memory usage:', 
         torch.cuda.memory_reserved()
     )
     torch.cuda.empty_cache()
