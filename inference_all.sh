@@ -9,4 +9,3 @@
 ./inference_resnet.py 16
 ./inference_stable_diffusion.py 32
 ./inference_stable_diffusion.py 16
-./inference_stable_diffusion.py 8
