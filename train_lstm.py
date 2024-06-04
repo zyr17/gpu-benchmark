@@ -26,6 +26,7 @@ def test(dtype, bs, num_iters):
     x = torch.randn(bs, seq_len, 256).cuda().type(dtype)
     y = torch.randn(bs, seq_len, 256).cuda().type(dtype)
     start_time = time.time()
+    _ = model(x)  # first time not count
     for _ in tqdm(range(num_iters)):
         output, (h, c) = model(x)
         loss = torch.nn.functional.mse_loss(output, y)

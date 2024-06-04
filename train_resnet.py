@@ -26,6 +26,7 @@ def test(dtype, bs, num_iters):
     start_time = time.time()
     input = torch.randn(bs, 3, 224, 224).cuda().type(dtype)
     label = torch.randint(0, 1000, (bs,)).cuda()
+    _ = model(input)  # first time not count
     for _ in tqdm(range(num_iters)):
         output = model(input)
         loss = torch.nn.functional.cross_entropy(output, label)

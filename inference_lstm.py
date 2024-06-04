@@ -25,6 +25,7 @@ def test(dtype, bs, num_iters):
     model = lstm_model(256, 256, 1).cuda().type(dtype)
     x = torch.randn(bs, seq_len, 256).cuda().type(dtype)
     start_time = time.time()
+    _ = model(x)  # first time not count
     for _ in tqdm(range(num_iters)):
         output, (h, c) = model(x)  # noqa
     end_time = time.time()

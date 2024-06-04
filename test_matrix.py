@@ -10,9 +10,9 @@ def test(dtype):
     a = torch.rand((number, number), device = 'cuda').type(dtype)
     res = 0
     start_time = time.time()
+    _ = a.matmul(a).sum().item()
     for _ in tqdm(range(100)):
-        for i in a:
-            res += i.matmul(i).sum().item()
+        res += a.matmul(a).sum().item()
     print(f'{dtype} sz=32768 matrix multiply time:', time.time() - start_time)
     print(
         f'{dtype} sz=32768 matrix multiply memory usage:', torch.cuda.memory_reserved())
