@@ -13,5 +13,6 @@ fi
 ./test_matrix.py 64
 ./test_matrix.py 32
 ./test_matrix.py 16
+./test_matrix.py b16
 ./train_all.sh
 ./inference_all.sh

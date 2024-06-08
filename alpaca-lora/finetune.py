@@ -28,7 +28,7 @@ from utils.prompter import Prompter
 
 
 dtype = os.environ.get("DTYPE", "16")
-assert dtype in ['4', '8', '16'], "Please provide a valid dtype in env DTYPE: 4, 8, 16"
+assert dtype in ['4', '8', '16', 'b16'], "Please provide a valid dtype in env DTYPE: 4, 8, 16, b16"
 
 
 def train(
@@ -127,6 +127,12 @@ def train(
             quantization_config=quantization_config,
         )
         model = prepare_model_for_kbit_training(model)
+    elif dtype == 'b16':
+        model = LlamaForCausalLM.from_pretrained(
+            base_model,
+            torch_dtype=torch.bfloat16,
+            device_map=device_map,
+        )
     else:
         model = LlamaForCausalLM.from_pretrained(
             base_model,

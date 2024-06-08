@@ -45,6 +45,8 @@ def test(dtype, bs, num_iters):
 if __name__ == '__main__':
     if sys.argv[1] == '16':
         test(torch.float16, 192, 300)
+    elif sys.argv[1] == 'b16':
+        test(torch.bfloat16, 160, 300)
     elif sys.argv[1] == '32':
         test(torch.float32, 96, 300)
     elif sys.argv[1] == '64':

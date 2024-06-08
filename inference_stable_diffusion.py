@@ -17,9 +17,12 @@ def test(dtype, bs, steps):
     start_time = time.time()
     with autocast("cuda"):
         _ = pipe([prompt] * bs, num_inference_steps = steps)["images"]
-    print('bs=10 Stable Diffusion 10it inference time:', time.time() - start_time)
     print(
-        'bs=10 Stable Diffusion 10it inference memory usage:', 
+        f'{dtype} bs=10 Stable Diffusion 10it inference time:', 
+        time.time() - start_time
+    )
+    print(
+        f'{dtype} bs=10 Stable Diffusion 10it inference memory usage:', 
         torch.cuda.memory_reserved()
     )
 
@@ -29,3 +32,5 @@ if __name__ == '__main__':
         test(torch.float32, 10, 500)
     elif sys.argv[1] == '16':
         test(torch.float16, 10, 500)
+    elif sys.argv[1] == 'b16':
+        test(torch.bfloat16, 10, 500)

@@ -41,6 +41,7 @@ different tests. The availabilities are:
 | FP4 | - | - | - | - | √ |
 | FP8 | - | - | - | - | √ |
 | FP16 | √ | √ | √ | √ | √ |
+| BF16 | √ | √ | √ | √ | - |
 | FP32 | √ | √ | √ | √ | - |
 | FP64 | √ | √ | √ | - | - |
 
