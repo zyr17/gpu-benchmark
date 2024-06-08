@@ -23,9 +23,9 @@ class resnet(nn.Module):
 def test(dtype, bs, num_iters):
     model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet152', pretrained=True)
     model = model.type(dtype).cuda()
-    start_time = time.time()
     input = torch.randn(bs, 3, 224, 224).cuda().type(dtype)
     _ = model(input)  # first time not count
+    start_time = time.time()
     for _ in tqdm(range(num_iters)):
         output = model(input)  # noqa
     end_time = time.time()
