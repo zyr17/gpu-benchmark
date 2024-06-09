@@ -54,7 +54,7 @@ def main(
         model = LlamaForCausalLM.from_pretrained(
             base_model,
             torch_dtype=torch.float16,
-            device_map="auto",
+            device_map="cuda:0",
             quantization_config=quantization_config,
         )
         model = prepare_model_for_kbit_training(model)
@@ -62,13 +62,13 @@ def main(
         model = LlamaForCausalLM.from_pretrained(
             base_model,
             torch_dtype=torch.bfloat16,
-            device_map="auto",
+            device_map="cuda:0",
         )
     else:
         model = LlamaForCausalLM.from_pretrained(
             base_model,
             torch_dtype=torch.float16,
-            device_map="auto",
+            device_map="cuda:0",
         )
 
     assert device == "cuda"
