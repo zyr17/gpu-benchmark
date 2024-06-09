@@ -30,14 +30,17 @@ Based on Python, PyTorch and huggingface libraries.
 
 Install by: `pip install -r requirements.txt`.
 
-You need to collect model weights from 
+You need to collect model weights from original (if you can connect to the model hub)
+or download the model manually to your `~/.local/` folder. When you are using docker,
+you need to mount them into the docker.
 
-## Training benchmarks
+We test the methods with different precisions, batch sizes, and iteration rounds.
+Batch sizes will be set to use approximately greater than half GPU memory.
+Iteration is determined by the time used for one iteration, each experiment will be 
+controlled to run about 1 to 5 minutes on 4090.
+`PRECISION` may be 4, 8, 16, b16, 32 or 64, for different tests. The availabilities 
+are:
 
-run `train_xxx.xx PRECISION`. Here `PRECISION` may be 4, 8, 16, 32 or 64, for
-different tests. The availabilities are:
-
-(WIP, refer to codes)
 | precision | `matrix` | `resnet` | `LSTM` | `Stable Diffusion` | `Alpaca Lora` |
 | ------- | ------- | ------- | ------- | ------- | ------- |
 | FP4 | - | - | - | - | √ |
@@ -46,6 +49,14 @@ different tests. The availabilities are:
 | BF16 | √ | √ | √ | √ | - |
 | FP32 | √ | √ | √ | √ | - |
 | FP64 | √ | √ | √ | - | - |
+
+We find BF16 has almost same calculation speed but will consume more GPU memory than 
+FP16, and do not know why. This makes the Alpaca Lora model unable to run with BF16,
+and other models should decrease the batch size to successfully run.
+
+## Training benchmarks
+
+run `train_xxx.xx PRECISION`. 
 
 or `train_all.sh` to test all.
 
@@ -63,3 +74,21 @@ Now only `test_matrix.py` to do vanilla matrix-matrix product.
 
 After test is done, it will print the time cost and VRAM usage by `time.time` and 
 `torch.cuda.memory_reserved`.
+
+## Testing environments for each cards
+
+This is not a exact test, many different variables exist for each cards (We do not have
+time to remove card out of its original case and put them on a same machine). Here 
+records the detailed hardware settings, OS information and driver information.
+
+TBD
+
+### 3090
+
+### 3090 Ti
+
+### 4090
+
+### 4090 D
+
+### 7900 XTX
