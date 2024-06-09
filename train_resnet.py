@@ -23,10 +23,10 @@ def test(dtype, bs, num_iters):
     model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet152', pretrained=True)
     model = model.type(dtype).cuda()
     optim = torch.optim.Adam(model.parameters(), lr = 1e-3)
-    start_time = time.time()
     input = torch.randn(bs, 3, 224, 224).cuda().type(dtype)
     label = torch.randint(0, 1000, (bs,)).cuda()
     _ = model(input)  # first time not count
+    start_time = time.time()
     for _ in tqdm(range(num_iters)):
         output = model(input)
         loss = torch.nn.functional.cross_entropy(output, label)

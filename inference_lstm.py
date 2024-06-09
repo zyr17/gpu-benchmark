@@ -24,8 +24,8 @@ def test(dtype, bs, num_iters):
     seq_len = 100
     model = lstm_model(256, 256, 1).cuda().type(dtype)
     x = torch.randn(bs, seq_len, 256).cuda().type(dtype)
-    start_time = time.time()
     _ = model(x)  # first time not count
+    start_time = time.time()
     for _ in tqdm(range(num_iters)):
         output, (h, c) = model(x)  # noqa
     end_time = time.time()
@@ -39,10 +39,10 @@ def test(dtype, bs, num_iters):
 
 if __name__ == '__main__':
     if sys.argv[1] == '16':
-        test(torch.float16, 24576, 2000)
+        test(torch.float16, 10240, 2000)
     elif sys.argv[1] == 'b16':
         test(torch.bfloat16, 24576, 2000)
     elif sys.argv[1] == '32':
-        test(torch.float32, 12288, 2000)
+        test(torch.float32, 10240, 2000)
     elif sys.argv[1] == '64':
-        test(torch.float64, 6144, 100)
+        test(torch.float64, 6144, 200)

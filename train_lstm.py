@@ -25,8 +25,8 @@ def test(dtype, bs, num_iters):
     optim = torch.optim.Adam(model.parameters(), lr = 1e-3)
     x = torch.randn(bs, seq_len, 256).cuda().type(dtype)
     y = torch.randn(bs, seq_len, 256).cuda().type(dtype)
-    start_time = time.time()
     _ = model(x)  # first time not count
+    start_time = time.time()
     for _ in tqdm(range(num_iters)):
         output, (h, c) = model(x)
         loss = torch.nn.functional.mse_loss(output, y)
@@ -44,10 +44,10 @@ def test(dtype, bs, num_iters):
 
 if __name__ == '__main__':
     if sys.argv[1] == '16':
-        test(torch.float16, 24576, 1000)
+        test(torch.float16, 10240, 1000)
     elif sys.argv[1] == 'b16':
         test(torch.bfloat16, 20480, 1000)
     elif sys.argv[1] == '32':
-        test(torch.float32, 12288, 1000)
+        test(torch.float32, 10240, 1000)
     elif sys.argv[1] == '64':
-        test(torch.float64, 6144, 50)
+        test(torch.float64, 4096, 100)
