@@ -17,7 +17,9 @@ export HF_HUB_OFFLINE=1
 ```
 
 The provided `docker-compose.yml` uses above environments, if you want to download them
-from huggingface, uncomment them.
+from huggingface, uncomment them. It builds from pytorch2.3.0-cuda11.8 for compatibility
+reasons, if you want to test on newer version of pytorch or cuda, you can build by 
+yourself.
 
 The docker is used for Nvidia cards, and for AMD cards (i.e. 7900XTX), you should build
 by yourself.
