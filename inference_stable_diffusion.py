@@ -18,11 +18,11 @@ def test(dtype, bs, steps):
     with autocast("cuda"):
         _ = pipe([prompt] * bs, num_inference_steps = steps)["images"]
     print(
-        f'{dtype} bs=10 Stable Diffusion 10it inference time:', 
+        f'{dtype} bs=10 Stable Diffusion {steps}it inference time:', 
         time.time() - start_time
     )
     print(
-        f'{dtype} bs=10 Stable Diffusion 10it inference memory usage:', 
+        f'{dtype} bs=10 Stable Diffusion {steps}it inference memory usage:', 
         torch.cuda.memory_reserved()
     )
 
