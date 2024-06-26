@@ -1,0 +1,316 @@
+torch.float64 sz=32768 5it matrix multiply time: 305.45513582229614
+torch.float64 sz=32768 5it matrix multiply memory usage: 21476933632
+torch.float64 sz=32768 5it matrix multiply time: 307.11704683303833
+torch.float64 sz=32768 5it matrix multiply memory usage: 21476933632
+torch.float32 sz=32768 100it matrix multiply time: 258.2370126247406
+torch.float32 sz=32768 100it matrix multiply memory usage: 8592031744
+torch.float32 sz=32768 100it matrix multiply time: 258.5234489440918
+torch.float32 sz=32768 100it matrix multiply memory usage: 8592031744
+torch.float16 sz=32768 200it matrix multiply time: 145.28175616264343
+torch.float16 sz=32768 200it matrix multiply memory usage: 6444548096
+torch.float16 sz=32768 200it matrix multiply time: 145.45275568962097
+torch.float16 sz=32768 200it matrix multiply memory usage: 6444548096
+torch.bfloat16 sz=32768 200it matrix multiply time: 141.26395416259766
+torch.bfloat16 sz=32768 200it matrix multiply memory usage: 6444548096
+torch.bfloat16 sz=32768 200it matrix multiply time: 141.30087113380432
+torch.bfloat16 sz=32768 200it matrix multiply memory usage: 6444548096
+Training Alpaca-LoRA model with params:
+base_model: luodian/llama-7b-hf
+data_path: yahma/alpaca-cleaned
+output_dir: ./lora-alpaca
+batch_size: 128
+micro_batch_size: 4
+num_epochs: 1
+learning_rate: 0.0003
+cutoff_len: 256
+val_set_size: 0
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: ['q_proj', 'v_proj']
+train_on_inputs: True
+add_eos_token: False
+group_by_length: False
+wandb_project: 
+wandb_run_name: 
+wandb_watch: 
+wandb_log_model: 
+resume_from_checkpoint: False
+prompt template: alpaca
+
+Training Alpaca-LoRA model with params:
+base_model: luodian/llama-7b-hf
+data_path: yahma/alpaca-cleaned
+output_dir: ./lora-alpaca
+batch_size: 128
+micro_batch_size: 4
+num_epochs: 1
+learning_rate: 0.0003
+cutoff_len: 256
+val_set_size: 0
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: ['q_proj', 'v_proj']
+train_on_inputs: True
+add_eos_token: False
+group_by_length: False
+wandb_project: 
+wandb_run_name: 
+wandb_watch: 
+wandb_log_model: 
+resume_from_checkpoint: False
+prompt template: alpaca
+
+Training Alpaca-LoRA model with params:
+base_model: luodian/llama-7b-hf
+data_path: yahma/alpaca-cleaned
+output_dir: ./lora-alpaca
+batch_size: 128
+micro_batch_size: 4
+num_epochs: 1
+learning_rate: 0.0003
+cutoff_len: 256
+val_set_size: 0
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: ['q_proj', 'v_proj']
+train_on_inputs: True
+add_eos_token: False
+group_by_length: False
+wandb_project: 
+wandb_run_name: 
+wandb_watch: 
+wandb_log_model: 
+resume_from_checkpoint: False
+prompt template: alpaca
+
+Training Alpaca-LoRA model with params:
+base_model: luodian/llama-7b-hf
+data_path: yahma/alpaca-cleaned
+output_dir: ./lora-alpaca
+batch_size: 128
+micro_batch_size: 4
+num_epochs: 1
+learning_rate: 0.0003
+cutoff_len: 256
+val_set_size: 0
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: ['q_proj', 'v_proj']
+train_on_inputs: True
+add_eos_token: False
+group_by_length: False
+wandb_project: 
+wandb_run_name: 
+wandb_watch: 
+wandb_log_model: 
+resume_from_checkpoint: False
+prompt template: alpaca
+
+torch.float64 bs=4096 100it LSTM train time: 110.62613344192505
+torch.float64 bs=4096 100it LSTM train memory usage: 17330864128
+torch.float64 bs=4096 100it LSTM train time: 111.17825174331665
+torch.float64 bs=4096 100it LSTM train memory usage: 17330864128
+torch.float32 bs=10240 1000it LSTM train time: 1269.854721546173
+torch.float32 bs=10240 1000it LSTM train memory usage: 24192745472
+torch.float32 bs=10240 1000it LSTM train time: 1269.4513008594513
+torch.float32 bs=10240 1000it LSTM train memory usage: 24192745472
+torch.float16 bs=10240 1000it LSTM train time: 173.2988212108612
+torch.float16 bs=10240 1000it LSTM train memory usage: 12589203456
+torch.float16 bs=10240 1000it LSTM train time: 173.18405413627625
+torch.float16 bs=10240 1000it LSTM train memory usage: 12589203456
+torch.bfloat16 bs=20480 1000it LSTM train time: 204.91772890090942
+torch.bfloat16 bs=20480 1000it LSTM train memory usage: 21112029184
+torch.bfloat16 bs=20480 1000it LSTM train time: 205.06844329833984
+torch.bfloat16 bs=20480 1000it LSTM train memory usage: 21112029184
+torch.float64 bs=48 50it ResNet152 train time: 237.02084755897522
+torch.float64 bs=48 50it ResNet152 train memory usage: 19438501888
+torch.float64 bs=48 50it ResNet152 train time: 236.83337259292603
+torch.float64 bs=48 50it ResNet152 train memory usage: 19438501888
+torch.float32 bs=96 300it ResNet152 train time: 171.69260573387146
+torch.float32 bs=96 300it ResNet152 train memory usage: 19574816768
+torch.float32 bs=96 300it ResNet152 train time: 171.89393520355225
+torch.float32 bs=96 300it ResNet152 train memory usage: 19574816768
+torch.float16 bs=192 300it ResNet152 train time: 182.76334166526794
+torch.float16 bs=192 300it ResNet152 train memory usage: 19226689536
+torch.float16 bs=192 300it ResNet152 train time: 182.65294933319092
+torch.float16 bs=192 300it ResNet152 train memory usage: 19226689536
+torch.bfloat16 bs=160 300it ResNet152 train time: 262.71698665618896
+torch.bfloat16 bs=160 300it ResNet152 train memory usage: 16074670080
+torch.bfloat16 bs=160 300it ResNet152 train time: 250.04922342300415
+torch.bfloat16 bs=160 300it ResNet152 train memory usage: 16074670080
+torch.float64 bs=6144 200it LSTM inference time: 132.21745419502258
+torch.float64 bs=6144 200it LSTM inference memory usage: 5272240128
+torch.float64 bs=6144 200it LSTM inference time: 133.07702374458313
+torch.float64 bs=6144 200it LSTM inference memory usage: 5272240128
+torch.float32 bs=10240 2000it LSTM inference time: 223.26315832138062
+torch.float32 bs=10240 2000it LSTM inference memory usage: 24184356864
+torch.float32 bs=10240 2000it LSTM inference time: 223.3948905467987
+torch.float32 bs=10240 2000it LSTM inference memory usage: 24184356864
+torch.float16 bs=10240 2000it LSTM inference time: 106.81947898864746
+torch.float16 bs=10240 2000it LSTM inference memory usage: 12587106304
+torch.float16 bs=10240 2000it LSTM inference time: 107.02009868621826
+torch.float16 bs=10240 2000it LSTM inference memory usage: 12587106304
+torch.bfloat16 bs=24576 2000it LSTM inference time: 162.5931055545807
+torch.bfloat16 bs=24576 2000it LSTM inference memory usage: 6295650304
+torch.bfloat16 bs=24576 2000it LSTM inference time: 162.60383200645447
+torch.bfloat16 bs=24576 2000it LSTM inference memory usage: 6295650304
+torch.float64 bs=768 10it ResNet152 inference time: 299.6595551967621
+torch.float64 bs=768 10it ResNet152 inference memory usage: 21644705792
+torch.float64 bs=768 10it ResNet152 inference time: 299.6583905220032
+torch.float64 bs=768 10it ResNet152 inference memory usage: 21644705792
+torch.float32 bs=1536 50it ResNet152 inference time: 130.23634600639343
+torch.float32 bs=1536 50it ResNet152 inference memory usage: 20910702592
+torch.float32 bs=1536 50it ResNet152 inference time: 130.26113533973694
+torch.float32 bs=1536 50it ResNet152 inference memory usage: 20910702592
+torch.float16 bs=3072 50it ResNet152 inference time: 137.22460913658142
+torch.float16 bs=3072 50it ResNet152 inference memory usage: 19243466752
+torch.float16 bs=3072 50it ResNet152 inference time: 137.2908113002777
+torch.float16 bs=3072 50it ResNet152 inference memory usage: 19243466752
+torch.bfloat16 bs=2048 100it ResNet152 inference time: 371.46285820007324
+torch.bfloat16 bs=2048 100it ResNet152 inference memory usage: 12874416128
+torch.bfloat16 bs=2048 100it ResNet152 inference time: 371.1132459640503
+torch.bfloat16 bs=2048 100it ResNet152 inference memory usage: 12874416128
+torch.float32 bs=10 Stable Diffusion 10it inference time: 221.9641559123993
+torch.float32 bs=10 Stable Diffusion 10it inference memory usage: 8342470656
+torch.float32 bs=10 Stable Diffusion 10it inference time: 221.83373880386353
+torch.float32 bs=10 Stable Diffusion 10it inference memory usage: 8357150720
+torch.float16 bs=10 Stable Diffusion 10it inference time: 222.15701055526733
+torch.float16 bs=10 Stable Diffusion 10it inference memory usage: 6153043968
+torch.float16 bs=10 Stable Diffusion 10it inference time: 221.87534618377686
+torch.float16 bs=10 Stable Diffusion 10it inference memory usage: 6180306944
+torch.bfloat16 bs=10 Stable Diffusion 10it inference time: 225.25515413284302
+torch.bfloat16 bs=10 Stable Diffusion 10it inference memory usage: 2946498560
+torch.bfloat16 bs=10 Stable Diffusion 10it inference time: 225.42427015304565
+torch.bfloat16 bs=10 Stable Diffusion 10it inference memory usage: 6180306944
+torch.float64 sz=32768 5it matrix multiply time: 304.647518157959
+torch.float64 sz=32768 5it matrix multiply memory usage: 21476933632
+torch.float64 sz=32768 5it matrix multiply time: 303.1270728111267
+torch.float64 sz=32768 5it matrix multiply memory usage: 21476933632
+Training Alpaca-LoRA model with params:
+base_model: luodian/llama-7b-hf
+data_path: yahma/alpaca-cleaned
+output_dir: ./lora-alpaca
+batch_size: 128
+micro_batch_size: 4
+num_epochs: 1
+learning_rate: 0.0003
+cutoff_len: 256
+val_set_size: 0
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: ['q_proj', 'v_proj']
+train_on_inputs: True
+add_eos_token: False
+group_by_length: False
+wandb_project: 
+wandb_run_name: 
+wandb_watch: 
+wandb_log_model: 
+resume_from_checkpoint: False
+prompt template: alpaca
+
+trainable params: 4,194,304 || all params: 6,742,609,920 || trainable%: 0.06220594176090199
+{'loss': 1.8599, 'grad_norm': 0.21419678628444672, 'learning_rate': 2.9999999999999997e-05, 'epoch': 1.0}
+{'train_runtime': 160.8725, 'train_samples_per_second': 7.957, 'train_steps_per_second': 0.062, 'train_loss': 1.8598905563354493, 'epoch': 1.0}
+16bit alpaca-lora 10it training time: 160.95204544067383
+16bit alpaca-lora 10it training memory usage: 17546870784
+Training Alpaca-LoRA model with params:
+base_model: luodian/llama-7b-hf
+data_path: yahma/alpaca-cleaned
+output_dir: ./lora-alpaca
+batch_size: 128
+micro_batch_size: 4
+num_epochs: 1
+learning_rate: 0.0003
+cutoff_len: 256
+val_set_size: 0
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: ['q_proj', 'v_proj']
+train_on_inputs: True
+add_eos_token: False
+group_by_length: False
+wandb_project: 
+wandb_run_name: 
+wandb_watch: 
+wandb_log_model: 
+resume_from_checkpoint: False
+prompt template: alpaca
+
+trainable params: 4,194,304 || all params: 6,742,609,920 || trainable%: 0.06220594176090199
+{'loss': 1.8544, 'grad_norm': 0.2649182677268982, 'learning_rate': 2.9999999999999997e-05, 'epoch': 1.0}
+{'train_runtime': 161.0627, 'train_samples_per_second': 7.947, 'train_steps_per_second': 0.062, 'train_loss': 1.8543834686279297, 'epoch': 1.0}
+16bit alpaca-lora 10it training time: 161.1385588645935
+16bit alpaca-lora 10it training memory usage: 19111346176
+Training Alpaca-LoRA model with params:
+base_model: luodian/llama-7b-hf
+data_path: yahma/alpaca-cleaned
+output_dir: ./lora-alpaca
+batch_size: 128
+micro_batch_size: 4
+num_epochs: 1
+learning_rate: 0.0003
+cutoff_len: 256
+val_set_size: 0
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: ['q_proj', 'v_proj']
+train_on_inputs: True
+add_eos_token: False
+group_by_length: False
+wandb_project: 
+wandb_run_name: 
+wandb_watch: 
+wandb_log_model: 
+resume_from_checkpoint: False
+prompt template: alpaca
+
+trainable params: 4,194,304 || all params: 6,742,609,920 || trainable%: 0.06220594176090199
+{'loss': 1.9544, 'grad_norm': 0.34393414855003357, 'learning_rate': 2.6999999999999996e-05, 'epoch': 1.0}
+{'train_runtime': 343.9002, 'train_samples_per_second': 3.722, 'train_steps_per_second': 0.029, 'train_loss': 1.9543855667114258, 'epoch': 1.0}
+4bit alpaca-lora 10it training time: 343.9973883628845
+4bit alpaca-lora 10it training memory usage: 6123683840
+Training Alpaca-LoRA model with params:
+base_model: luodian/llama-7b-hf
+data_path: yahma/alpaca-cleaned
+output_dir: ./lora-alpaca
+batch_size: 128
+micro_batch_size: 4
+num_epochs: 1
+learning_rate: 0.0003
+cutoff_len: 256
+val_set_size: 0
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: ['q_proj', 'v_proj']
+train_on_inputs: True
+add_eos_token: False
+group_by_length: False
+wandb_project: 
+wandb_run_name: 
+wandb_watch: 
+wandb_log_model: 
+resume_from_checkpoint: False
+prompt template: alpaca
+
+trainable params: 4,194,304 || all params: 6,742,609,920 || trainable%: 0.06220594176090199
+{'loss': 1.9612, 'grad_norm': 0.3444666266441345, 'learning_rate': 2.6999999999999996e-05, 'epoch': 1.0}
+{'train_runtime': 343.0061, 'train_samples_per_second': 3.732, 'train_steps_per_second': 0.029, 'train_loss': 1.961201286315918, 'epoch': 1.0}
+4bit alpaca-lora 10it training time: 343.08830738067627
+4bit alpaca-lora 10it training memory usage: 6304038912
+16bit alpaca-lora 30it inference time: 129.78180170059204
+16bit alpaca-lora 30it inference memory usage: 14931722240
+16bit alpaca-lora 30it inference time: 129.61942553520203
+16bit alpaca-lora 30it inference memory usage: 14931722240
+4bit alpaca-lora 30it inference time: 628.9758169651031
+4bit alpaca-lora 30it inference memory usage: 8040480768
+4bit alpaca-lora 30it inference time: 628.8942313194275
+4bit alpaca-lora 30it inference memory usage: 8040480768
